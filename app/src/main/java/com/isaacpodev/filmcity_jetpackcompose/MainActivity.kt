@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.isaacpodev.filmcity_jetpackcompose.loginpage.ui.LoginScreen
+import com.isaacpodev.filmcity_jetpackcompose.mainscreen.MainScreen
 import com.isaacpodev.filmcity_jetpackcompose.ui.theme.FilmCity_JetpackComposeTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             FilmCity_JetpackComposeTheme {
-                LoginScreen()
+                MainScreen()
             }
         }
     }
