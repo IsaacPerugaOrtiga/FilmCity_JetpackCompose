@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             FilmCity_JetpackComposeTheme {
-                MainScreen()
+                AppNavigation()
             }
         }
     }
@@ -42,6 +42,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     FilmCity_JetpackComposeTheme {
-        LoginScreen()
+        AppNavigation()
     }
 }

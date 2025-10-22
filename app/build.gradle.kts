@@ -65,4 +65,6 @@ dependencies {
     implementation(libs.androidx.material.icon)
     //LiveData
     implementation(libs.androidx.compose.runtime)
+    //NavController
+    implementation(libs.android.nav.controller)
 }

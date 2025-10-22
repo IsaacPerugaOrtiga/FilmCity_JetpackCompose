@@ -1,9 +1,9 @@
 package com.isaacpodev.filmcity_jetpackcompose.mainscreen
 
-import android.annotation.SuppressLint
-import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.text.input.TextFieldState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AcUnit
 import androidx.compose.material.icons.filled.NightShelter
@@ -14,16 +14,14 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.isaacpodev.filmcity_jetpackcompose.featuredpage.ui.FeaturedScreen
 import com.isaacpodev.filmcity_jetpackcompose.myshelf.ui.MyShelfScreen
 import com.isaacpodev.filmcity_jetpackcompose.searchpage.ui.SearchScreen
@@ -60,7 +58,14 @@ fun MainScreen() {
             }
         }
     ) { innerPadding ->
-        ContentScreen(modifier = Modifier.padding(innerPadding), selectedIndex)
+        Column (
+            modifier = Modifier
+                .padding(innerPadding) 
+                .fillMaxSize()
+        ){
+            ContentScreen(Modifier.padding(innerPadding), selectedIndex)
+        }
+
 
     }
 }
@@ -69,7 +74,11 @@ fun MainScreen() {
 fun ContentScreen(modifier: Modifier, selectedInt: Int) {
     when (selectedInt) {
         0 -> FeaturedScreen()
-        1 -> SearchScreen()
+        1 -> SearchScreen(
+            onSearch = {},
+            searchResults = listOf("Hola","Buenas","Como"),
+            modifier = modifier
+        )
         2 -> MyShelfScreen()
     }
 }
