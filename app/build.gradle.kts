@@ -67,4 +67,10 @@ dependencies {
     implementation(libs.androidx.compose.runtime)
     //NavController
     implementation(libs.android.nav.controller)
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    //Firebase
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
 }

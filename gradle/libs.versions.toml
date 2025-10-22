@@ -11,6 +11,9 @@ composeBom = "2024.09.00"
 dagger = "2.53"
 ksp = "2.1.0-1.0.29"
 navController = "2.8.0-beta05"
+retrofit = "2.10.0"
+firebase-auth = "22.0.0"
+firebase-firestore = "24.6.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +35,11 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.r
 androidx-material-icon = { group = "androidx.compose.material", name = "material-icons-extended" }
 androidx-compose-runtime = {group = "androidx.compose.runtime", name = "runtime-livedata"}
 android-nav-controller = {group = "androidx.navigation", name = "navigation-compose", version.ref ="navController"}
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+firebase-auth = {group = "com.google.firebase", name = "firebase-auth", version.ref="firebase-auth"}
+firebase-firestore = {group = "com.google.firebase", name = "firebase-firestore", version.ref="firebase-firestore"}
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
