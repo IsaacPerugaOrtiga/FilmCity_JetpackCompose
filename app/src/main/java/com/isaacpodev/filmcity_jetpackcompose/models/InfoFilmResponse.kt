@@ -4,19 +4,19 @@ import com.google.gson.annotations.SerializedName
 
 data class InfoFilmResponse(
     @SerializedName("id")
-    val idPelicula: Int,
+    val idFilm: Int,
     @SerializedName("overview")
-    val sinopsis: String,
+    val synopsis: String,
 
     @SerializedName("tagline")
     val tagline: String,
 
     @SerializedName("original_language")
-    val idioma: String,
+    val laguage: String,
 
     @SerializedName("runtime")
-    val duracion: Int,
+    val duration: Int,
 
     @SerializedName("genres")
-    var generos: MutableList<Genre?>
+    var genres: MutableList<Genre?>
 )

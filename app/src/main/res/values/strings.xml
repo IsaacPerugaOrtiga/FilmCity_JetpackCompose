@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FilmCity_JetpackCompose</string>
+    <string name="api_url_moviedb">https://api.themoviedb.org/3/</string>
 </resources>
